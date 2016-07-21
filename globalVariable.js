@@ -1,29 +1,31 @@
-var Controller = (function () {
+var Controller = (function (thing) {
 
   var button = document.getElementById("translate");
-  button.addEventListener('click', chooseLanguage)
-
-  var toTranslate = document.getElementById("toTranslate");
-  var inputText = toTranslate.toLowerCase.split(" ");
+  button.addEventListener('click', chooseLanguage);
 
   var latin = document.getElementById("latin");
   var french = document.getElementById("french");
   var german = document.getElementById("german");
 
-  console.log(inputText);
-  console.log(toTranslate);
+  function chooseLanguage (evt) {
 
+    var toTranslate = document.getElementById("toTranslate").value;
+    console.log(toTranslate);
+    var inputText = toTranslate.toLowerCase().split(" ");
 
-  function chooseLanguage {
     if (inputText !== " " && latin.selected) {
-      return //Run latin program somehow
+      var answer = thing.toLatin(inputText)
+      console.log("LOVE EM!", answer)
     } else if (inputText !== " " && french.selected) {
-      return //Run French program somehow
+      thing.toFrench(inputText)
     } else if (inputText !== " " && german.selected) {
-      return //Run German Program Somehow
+      thing.toGerman(inputText)
     } else {
       alert("Please select a language and put in text")
     }
   }
+  console.log("test");
+
+  return thing
 }
-)()
+)(Controller || {} )

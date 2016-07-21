@@ -1,6 +1,8 @@
 Controller = (function (translateToLatin) {
 
-console.log("Your Latin has run?");
+	translateToLatin.toLatin = function(inputText) {
+
+	console.log("Your Latin has run?");
 
   var latinLexicon = {
     "merry"     : "hilarus",
@@ -15,11 +17,14 @@ console.log("Your Latin has run?");
   console.log(translatedText);
   console.log(Controller);
 
-  for (i=0; i < Controller.inputText.length; i++) {
+  for (i=0; i < inputText.length; i++) {
 	 translatedText +=
-	 (latinLexicon[Controller.inputText[i]] || Controller.inputText[i]) + " ";
+	 (latinLexicon[inputText[i]] || inputText[i]) + " ";
 	 }
 
+	   console.log(translatedText);
 	   return translatedText
-	   console.log(translatedText)
-})(Controller)
+	 }
+
+	 return translateToLatin;
+})( {} )
