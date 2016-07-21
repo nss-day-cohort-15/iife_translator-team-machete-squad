@@ -10,21 +10,27 @@ var Controller = (function (thing) {
   function chooseLanguage (evt) {
 
     var toTranslate = document.getElementById("toTranslate").value;
-    console.log(toTranslate);
+
+    if (!toTranslate) {
+      return alert("Please select a language and put in text");
+    }
+
     var inputText = toTranslate.toLowerCase().split(" ");
+    console.log(inputText, "Input text is here");
+    var translated = document.getElementById("translatedText")
 
-    if (inputText !== " " && latin.selected) {
-      var answer = thing.toLatin(inputText)
-      console.log(answer)
-
-    } else if (inputText !== " " && french.selected) {
-      var answer = thing.toFrench(inputText)
-      console.log(answer)
-    } else if (inputText !== " " && german.selected) {
-      var answer = thing.toGerman(inputText)
-      console.log(answer)
-    } else {
-      alert("Please select a language and put in text");
+    if (inputText && latin.selected) {
+        var answer = thing.toLatin(inputText)
+        console.log(answer);
+        translated.innerText = answer;
+    } else if (inputText && french.selected) {
+        var answer = thing.toFrench(inputText)
+        console.log(answer);
+        translated.innerText = answer;
+    } else if (inputText && german.selected) {
+        console.log(answer);
+        var answer = thing.toGerman(inputText)
+        translated.innerText = answer;
     }
   }
 
