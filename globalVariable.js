@@ -15,12 +15,14 @@ var Controller = (function (thing) {
 
     if (inputText !== " " && latin.selected) {
       var answer = thing.toLatin(inputText)
-      console.log("LOVE EM!", answer)
+      console.log(answer)
+
     } else if (inputText !== " " && french.selected) {
       var answer = thing.toFrench(inputText)
       console.log(answer)
     } else if (inputText !== " " && german.selected) {
       var answer = thing.toGerman(inputText)
+      console.log(answer)
     } else {
       alert("Please select a language and put in text");
     }

@@ -2,8 +2,6 @@ Controller = (function (translateToFrench) {
 
   translateToFrench.toFrench = function(inputText) {
 
-  console.log("Your French has run?");
-
    var frenchLexicon = {
      "merry": "Joyeux",
      "christmas": "Noël",
@@ -24,4 +22,4 @@ Controller = (function (translateToFrench) {
      }
 
      return translateToFrench;
-})( {} )
+})( Controller )
