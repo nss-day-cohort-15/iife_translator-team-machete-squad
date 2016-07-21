@@ -14,17 +14,14 @@ Controller = (function (translateToLatin) {
   };
 
   var translatedText = "";
-  console.log(translatedText);
-  console.log(Controller);
 
   for (i=0; i < inputText.length; i++) {
 	 translatedText +=
 	 (latinLexicon[inputText[i]] || inputText[i]) + " ";
 	 }
 
-	   console.log(translatedText);
 	   return translatedText
 	 }
 
 	 return translateToLatin;
-})( {} )
+})(Controller)

@@ -17,15 +17,15 @@ var Controller = (function (thing) {
       var answer = thing.toLatin(inputText)
       console.log("LOVE EM!", answer)
     } else if (inputText !== " " && french.selected) {
-      thing.toFrench(inputText)
+      var answer = thing.toFrench(inputText)
+      console.log(answer)
     } else if (inputText !== " " && german.selected) {
-      thing.toGerman(inputText)
+      var answer = thing.toGerman(inputText)
     } else {
-      alert("Please select a language and put in text")
+      alert("Please select a language and put in text");
     }
   }
-  console.log("test");
 
   return thing
 }
-)(Controller || {} )
+)(Controller)
