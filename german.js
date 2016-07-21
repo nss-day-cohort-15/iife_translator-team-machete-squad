@@ -1,4 +1,7 @@
 Controller = (function (translateToGerman) {
+  translateToGerman.toGerman = function(inputText) {
+
+    console.log("Your German has run?");
 
   var germanLexicon = {
     "merry" : "fröhlich",
@@ -9,11 +12,17 @@ Controller = (function (translateToGerman) {
     "year" : "jahr"
 };
 
-var translatedText = "";
+  var translatedText = "";
+  console.log(translatedText);
+  console.log(Controller);
 
-for (i=0; i < Controller.toTranslate.length; i++) {
-    translatedText +=
-    (germanLexicon[Controller.toTranslate[i]] || Controller.toTranslate[i]) + " ";
-    }
-      return translatedText
-})(Controller)
+  for (i=0; i < inputText.length; i++) {
+      translatedText +=
+      (germanLexicon[inputText[i]] || inputText[i]) + " ";
+      }
+        console.log(translatedText);
+        return translatedText
+      }
+
+      return translateToGerman;
+  })( {} )
