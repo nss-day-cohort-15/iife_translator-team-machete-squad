@@ -2,8 +2,6 @@ Controller = (function (translateToLatin) {
 
 	translateToLatin.toLatin = function(inputText) {
 
-	console.log("Your Latin has run?");
-
   var latinLexicon = {
     "merry"     : "hilarus",
     "christmas" : "christus",
