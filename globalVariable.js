@@ -16,7 +16,6 @@ var Controller = (function (thing) {
     }
 
     var inputText = toTranslate.toLowerCase().split(" ");
-    console.log(inputText, "Input text is here");
     var translated = document.getElementById("translatedText")
 
     if (inputText && latin.selected) {

@@ -3,19 +3,18 @@ Controller = (function (translateToFrench) {
   translateToFrench.toFrench = function(inputText) {
 
    var frenchLexicon = {
-     "merry": "Joyeux",
+     "merry"    : "Joyeux",
      "christmas": "Noël",
-     "and": "et",
-     "happy": "heureuse",
-     "new": "nouvelle",
-     "year": "année"
+     "and"      : "et",
+     "happy"    : "heureuse",
+     "new"      : "nouvelle",
+     "year"     : "année"
    };
 
  var translatedText = "";
 
  for (i=0; i < inputText.length; i++) {
-     translatedText +=
-     (frenchLexicon[inputText[i]] || inputText[i]) + " ";
+     translatedText += (frenchLexicon[inputText[i]] || inputText[i]) + " ";
      }
 
        return translatedText

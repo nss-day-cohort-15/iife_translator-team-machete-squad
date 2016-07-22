@@ -4,7 +4,7 @@ Controller = (function (translateToLatin) {
 
   var latinLexicon = {
     "merry"     : "hilarus",
-    "christmas" : "christus",
+    "christmas" : "Christus",
     "and"       : "et",
     "happy"     : "beatus",
     "new"       : "novus",
@@ -13,7 +13,7 @@ Controller = (function (translateToLatin) {
 
   var translatedText = "";
 
-  for (i=0; i < inputText.length; i++) {
+  for (i = 0; i < inputText.length; i++) {
 	 translatedText +=
 	 (latinLexicon[inputText[i]] || inputText[i]) + " ";
 	 }
