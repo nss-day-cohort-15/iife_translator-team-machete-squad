@@ -20,7 +20,6 @@ Controller = (function (translateToFrench) {
      (frenchLexicon[inputText[i]] || inputText[i]) + " ";
      }
 
-       console.log(translatedText);
        return translatedText
      }
 
